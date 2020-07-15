@@ -22,7 +22,11 @@
         @include sm {
             background-image: url("./../images/bg-pattern-intro-right-mobile.svg");
             background-position: right;
-            top: 71rem;
+            top: 80%;
+        }
+
+        @include xs {
+            top: 72%;
         }
     }
 
@@ -37,15 +41,16 @@
         width: 20rem;
         height: 50rem;
 
-        @include md {
-            top: 50rem;
-        }
-
         @include sm {
             background-image: url("./../images/bg-pattern-intro-left-mobile.svg");
             background-position: left top;
-            top: 45rem;
+            top: 70%;
+            left: 0;
             z-index: 0;
+        }
+
+        @include xs {
+            top: 41%;
         }
     }
 

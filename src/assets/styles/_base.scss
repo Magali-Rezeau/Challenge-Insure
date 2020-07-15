@@ -1,23 +1,29 @@
 html {
     font-size: 62.5%;
 }
+
 body {
     font-size: 1.6rem;
     background-color: var(--bg-body);
     color: var(--very-dark-violet);
     font-family: var(--body);
 }
+
 a {
     text-decoration: none;
     text-transform: uppercase;
     color: var(--dark-grayish-violet);
     font-size: 1.4rem;
-    
+
 }
+
 ul li {
     list-style-type: none;
 }
-h1, h2, h3 {
+
+h1,
+h2,
+h3 {
     font-family: var(--headings);
     font-weight: 400;
 }
@@ -28,8 +34,8 @@ h1, h2, h3 {
     padding: 1rem 3rem;
     font-size: 1.4rem;
 }
+
 p {
     color: var(--dark-grayish-violet);
     line-height: 2.5rem;
 }
-
