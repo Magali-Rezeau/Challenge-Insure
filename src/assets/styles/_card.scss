@@ -1,0 +1,100 @@
+.card {
+    display: grid;
+    grid-template-columns: 16rem 1fr 1fr 1fr 16rem;
+    grid-template-rows: 18rem 37rem;
+    align-items: center;
+    margin-top: 3rem;
+
+    @include md {
+        grid-template-columns: 5rem 1fr 1fr 1fr 5rem;
+    }
+
+    @include sm {
+        grid-template-rows: 20rem repeat(3, 30rem);
+        grid-template-columns: 1fr;
+        margin: 0 2rem;
+        text-align: center;
+    }
+
+    & hr {
+        display: none;
+
+        @include sm {
+            display: block;
+            color: var(--dark-grayish-violet);
+            width: 10rem;
+            height: 0;
+            margin: 0 auto;
+            grid-area: 1 / 1 / 2 / 2;
+        }
+    }
+
+    & h2 {
+        grid-area: 1 / 2 / 2 / 5;
+        font-size: 7rem;
+
+        @include sm {
+            grid-area: 1 / 1 / 2 / 2;
+            font-size: 4rem;
+            align-self: flex-end;
+        }
+    }
+
+    &-1,
+    &-2,
+    &-3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 1.8rem;
+        height: 100%;
+        margin-right: 4rem;
+
+        @include sm {
+            font-size: 2rem;
+            text-align: center;
+            margin: 0 4rem;
+        }
+
+        & img {
+            width: 9rem;
+
+            @include sm {
+                width: 6rem;
+                align-self: center;
+            }
+        }
+
+        & h3 {
+            font-size: 3rem;
+
+            @include sm {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    &-1 {
+        grid-area: 2 / 2 / 3 / 3;
+
+        @include sm {
+            grid-area: 2 / 1 / 3 / 2;
+        }
+    }
+
+    &-2 {
+        grid-area: 2 / 3 / 3 / 4;
+
+        @include sm {
+            grid-area: 3 / 1 / 4 / 2;
+        }
+    }
+
+    &-3 {
+        grid-area: 2 / 4 / 3 / 5;
+
+        @include sm {
+            grid-area: 4 / 1 / 5 / 2;
+        }
+    }
+}
